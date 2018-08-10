@@ -40,19 +40,25 @@ $(document).ready(function() {
     var choice6 = $("input:radio[name=question6]:checked").val();
     tallyUpResults(choice1);
     console.log(userName);
-    $(".user-name").text(userName);
 
-    if ( rubyRails >= 4 ) {
-      $("#ruby-rails").show();
-    } else if ( cssReact >= 4 ) {
-      $("#css-react").show();
-    } else if ( cNet >= 4 ) {
-      $("#c-net").show();
-    } else if ( none >= 5 ) {
-      $("#no-suggestion").show();
+    if ( userName === undefined || choice1 === undefined || choice2 === undefined || choice3 === undefined || choice4 === undefined || choice5 === undefined || choice6 === undefined ) {
+      $("#must-fill-message").show();
+    } else {
+      $("#must-fill-message").hide();
+      $(".user-name").text(userName);
+
+      if ( rubyRails >= 4 ) {
+        $("#ruby-rails").show();
+      } else if ( cssReact >= 4 ) {
+        $("#css-react").show();
+      } else if ( cNet >= 4 ) {
+        $("#c-net").show();
+      } else if ( none >= 5 ) {
+        $("#no-suggestion").show();
+      }
+
+      $("#survey-container").hide();
     }
-
-    $("#survey-container").hide();
   });
   $(".return").click(function() {
     rubyRails = 0;

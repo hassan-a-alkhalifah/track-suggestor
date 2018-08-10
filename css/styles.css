@@ -24,6 +24,9 @@
 .lang-logo {
   width: 91px;
 }
+#ruby-on-rails-img-container {
+  padding-top: 70px;
+}
 #ruby-rails, #css-react, #c-net, #no-suggestion {
   display: none;
 }
@@ -56,6 +59,12 @@
 #submit-btn:hover, .return-btn:hover {
   color: #FFF;
   background-color: #00B3B4;
+}
+#must-fill-message {
+  display: none;
+  color: #FF0000;
+  text-align: center;
+  margin-top: 30px;
 }
 #results h1 {
   font-size: 42px;

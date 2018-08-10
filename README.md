@@ -61,6 +61,8 @@ git config --global user.email example@gmail.com_
 
 *_README_
 
+*_Photoshop_
+
 ### License
 
 Copyright (c) 2018 **_Hassan Al-khalifah_**
