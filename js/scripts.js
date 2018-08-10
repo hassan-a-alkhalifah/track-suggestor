@@ -37,14 +37,16 @@ $(document).ready(function() {
     tallyUpResults(choice1);
 
     if ( rubyRails === 6 ) {
-      $("ruby-rails").show();
+      $("#ruby-rails").show();
     } else if ( cssReact === 6 ) {
-      $("css-react").show();
+      $("#css-react").show();
     } else if ( cNet === 6 ) {
-      $("c-net").show();
+      $("#c-net").show();
     } else if ( none === 6 ) {
-      $("no-suggestion").show();
+      $("#no-suggestion").show();
     }
+
+    $("#survey-container").hide();
 
     console.log("ruby: " + rubyRails + " css-react: " + cssReact + " c-net " + cNet + " none: " + none + " all: " + all);
   });
