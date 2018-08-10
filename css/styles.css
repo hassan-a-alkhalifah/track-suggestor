@@ -1,3 +1,4 @@
+/*--- HEADER STYLES ---*/
 #epicodus-logo {
   width: 150px;
   margin: 30px 0 30px 45px;
@@ -27,9 +28,7 @@
 #ruby-on-rails-img-container {
   padding-top: 70px;
 }
-#ruby-rails, #css-react, #c-net, #no-suggestion {
-  display: none;
-}
+/*--- SURVEY STYLES ---*/
 #survey-container h1{
   font-size: 42px;
   margin-bottom: 50px;
@@ -66,6 +65,9 @@
   text-align: center;
   margin-top: 30px;
 }
+#ruby-rails, #css-react, #c-net, #no-suggestion {
+  display: none;
+}
 #results h1 {
   font-size: 42px;
   text-align: center;
@@ -76,6 +78,7 @@
   font-style: italic;
   text-decoration: underline;
 }
+/*--- FOOTER STYLES ---*/
 #footer {
   color: #FFF;
   background-color: #969696;

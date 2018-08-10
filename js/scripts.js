@@ -1,11 +1,12 @@
-// Back-end logic
+// Below if back-end logic
 var rubyRails = 0;
 var cssReact = 0;
 var cNet = 0;
 var none = 0;
 var all = 0;
 
-var tallyUpResults = function(choice) {
+var tallyUpResults = function(choice) // tallying up users input choices
+{
   if ( choice === "ruby-rails") {
     rubyRails += 1;
   } else if ( choice === "css-react" ) {
@@ -20,13 +21,13 @@ var tallyUpResults = function(choice) {
     cNet += 1;
   }
 }
-// Front-end logic
+
+// Below is front-end logic
 $(document).ready(function() {
   $("#survey").submit(function(event) {
     event.preventDefault();
 
-    var userName = $("#user-name-input").val();
-
+    var userName = $("#user-name-input").val(); // survey user inputs
     var choice1 = $("input:radio[name=question1]:checked").val();
     tallyUpResults(choice1);
     var choice2 = $("input:radio[name=question2]:checked").val();
@@ -39,9 +40,9 @@ $(document).ready(function() {
     tallyUpResults(choice1);
     var choice6 = $("input:radio[name=question6]:checked").val();
     tallyUpResults(choice1);
-    console.log(userName);
 
-    if ( userName === undefined || choice1 === undefined || choice2 === undefined || choice3 === undefined || choice4 === undefined || choice5 === undefined || choice6 === undefined ) {
+    if ( userName === "" || choice1 === undefined || choice2 === undefined || choice3 === undefined || choice4 === undefined || choice5 === undefined || choice6 === undefined ) // checking if all input fields are filled, else prevent submission of form
+    {
       $("#must-fill-message").show();
     } else {
       $("#must-fill-message").hide();
@@ -60,7 +61,9 @@ $(document).ready(function() {
       $("#survey-container").hide();
     }
   });
-  $(".return").click(function() {
+
+  $(".return").click(function() // return to home page button
+  {
     rubyRails = 0;
     cssReact = 0;
     cNet = 0;
