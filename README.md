@@ -10,7 +10,7 @@ _This website is a survey that will provide course suggestions for future studen
 
 _This was a practice project I worked on as a student for [**Epicodus**](https://www.epicodus.com/). The project was design for students to showcase what they learned from regarding basic HTML, CSS and JavaScript concepts. Bootstrap was used to cover basic form and structure of the page. jQuery was used to target user input and provide a course suggestion based on branching, i.e. if and else statements. jQuery was also used to return survey if returned to home page._
 
-_You can view the website live [**here**]()_
+_You can view the website live [**here**](https://hassan-a-alkhalifah.github.io/track-suggestor/)_
 
 ## Setup/Installation Instructions
 
