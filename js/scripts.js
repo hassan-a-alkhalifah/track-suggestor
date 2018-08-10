@@ -1,3 +1,4 @@
+// Back-end logic
 var rubyRails = 0;
 var cssReact = 0;
 var cNet = 0;
@@ -19,10 +20,13 @@ var tallyUpResults = function(choice) {
     cNet += 1;
   }
 }
-
+// Front-end logic
 $(document).ready(function() {
   $("#survey").submit(function(event) {
     event.preventDefault();
+
+    var userName = $("#user-name-input").val();
+
     var choice1 = $("input:radio[name=question1]:checked").val();
     tallyUpResults(choice1);
     var choice2 = $("input:radio[name=question2]:checked").val();
@@ -35,19 +39,30 @@ $(document).ready(function() {
     tallyUpResults(choice1);
     var choice6 = $("input:radio[name=question6]:checked").val();
     tallyUpResults(choice1);
+    console.log(userName);
+    $(".user-name").text(userName);
 
-    if ( rubyRails === 6 ) {
+    if ( rubyRails >= 4 ) {
       $("#ruby-rails").show();
-    } else if ( cssReact === 6 ) {
+    } else if ( cssReact >= 4 ) {
       $("#css-react").show();
-    } else if ( cNet === 6 ) {
+    } else if ( cNet >= 4 ) {
       $("#c-net").show();
-    } else if ( none === 6 ) {
+    } else if ( none >= 5 ) {
       $("#no-suggestion").show();
     }
 
     $("#survey-container").hide();
-
-    console.log("ruby: " + rubyRails + " css-react: " + cssReact + " c-net " + cNet + " none: " + none + " all: " + all);
+  });
+  $(".return").click(function() {
+    rubyRails = 0;
+    cssReact = 0;
+    cNet = 0;
+    none = 0;
+    all = 0;
+    $("#user-name-input").val("");
+    $('input[type="radio"]').prop('checked', false);
+    $(".hide").hide();
+    $("#survey-container").show();
   });
 });
