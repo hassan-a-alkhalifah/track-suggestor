@@ -1,3 +1,15 @@
+#epicodus-logo {
+  width: 150px;
+}
+#intro-title-container {
+  background-color: #1C1C1C;
+}
+#intro-title-container h1 {
+  color: #FFF;
+}
+.lang-logo {
+  width: 100px;
+}
 #ruby-rails, #css-react, #c-net, #no-suggestion {
   display: none;
 }
