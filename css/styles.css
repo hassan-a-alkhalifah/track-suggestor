@@ -26,7 +26,7 @@
 #ruby-rails, #css-react, #c-net, #no-suggestion {
   display: none;
 }
-#survey-container h2{
+#survey-container h1{
   font-size: 42px;
   margin-bottom: 50px;
 }
@@ -49,6 +49,16 @@
 #submit-btn:hover {
   color: #FFF;
   background-color: #00B3B4;
+}
+#results h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px
+}
+#results a {
+  color: ##212529;
+  font-style: italic;
+  text-decoration: underline;
 }
 #footer {
   color: #FFF;
